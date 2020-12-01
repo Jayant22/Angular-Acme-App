@@ -38,9 +38,4 @@ export class ProductListComponent implements OnInit {
       console.log(this.showImage);
     }
   }
-
-  transferProductDetails = function(productId) {
-    this.productService.getSpecificProductDetails(productId);
-  }
-
 }
