@@ -1,4 +1,3 @@
-
 <div class="card">
     <h5 class="card-header" style="color:whitesmoke; background-color: #3a7eb5;">Product List</h5>
     <div class="card-body">
@@ -20,10 +19,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products | searchFilter: searchText">
+                    <tr *ngFor="let product of products | searchFilter: searchText" >
                         <td><img id='imgSize' [hidden]='showImage' [src]="product.imageUrl" alt=""></td>
                         <td>
-                            <a class="nav-link" href="/productDetails" (click)='setProductID(product.productId)'>{{product.productName}}</a>
+                            <a class="nav-link" routerLink="/productDetails" [state]="product">{{product.productName}}</a>
                         </td>
                         <td [innerHtml]='product.productCode'></td>
                         <td [innerHtml]='product.releaseDate'></td>

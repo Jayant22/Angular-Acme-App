@@ -39,8 +39,8 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  setProductID = function(productId) {
-    localStorage.setItem('productID', productId);
+  transferProductDetails = function(productId) {
+    this.productService.getSpecificProductDetails(productId);
   }
 
 }
